@@ -88,3 +88,21 @@ str(harga)
 # konversi dari string ke int
 int(harga)
 ```
+
+## Komentar
+```python
+# ini komentar satu baris
+
+"""
+ini komentar beberapa baris
+ini komentar juga
+begitu juga dengan ini
+"""
+```
+
+## Input
+```python
+nama = input("Siapa nama kamu? ")
+umur = input("berapa umurmu? ")
+print("salam kenal! boss " + nama + ", kamu sudah " + umur + " tahun")
+```
