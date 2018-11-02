@@ -131,6 +131,7 @@ if angka1 == angka2:
     print('benar angka1 dan angka2 sama besar')
 else:
     print('salah!')
+# Output: salah!
 ```
 
 ### If, Elif, dan Else
@@ -145,3 +146,49 @@ elif int(uang) == utang:
 else:
     print('wah uangnya lebih bos')
 ```
+
+## Operator
+Operator logika di python.
+```python
+"""
+and or not
+&   |  !=
+"""
+
+if (2 > 1) & (3 < 5):
+    print('anda benar!')
+else:
+    print('anda salah!')
+# Output: anda benar!
+```
+
+## Perulangan
+### While loop
+```python
+count = 1
+
+while count < 5:
+    print('belajar python')
+    count = count + 1
+else:
+    print("akhir dari loop, countnya adalah", count)
+```
+
+### For in loop
+```python
+text  = 'python'
+orang = ['yusup', 'maulana', 'aris']
+
+for nama in orang:
+    print('nama-namanya adalah ', nama)
+```
+
+## Lists
+## Tuples
+## Dictionary
+## Set
+## Fungsi
+## Module
+## Scope variabel
+## Exception handling
+## Latihan
