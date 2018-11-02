@@ -172,6 +172,17 @@ while count < 5:
     count = count + 1
 else:
     print("akhir dari loop, countnya adalah", count)
+
+# nested loop pada while
+a = 1
+
+while a < 5:
+    b = 0
+    while b < a:
+        print('*', end='')
+        b = b + 1
+    print()
+    a = a + 1
 ```
 
 ### For in loop
@@ -181,11 +192,70 @@ orang = ['yusup', 'maulana', 'aris']
 
 for nama in orang:
     print('nama-namanya adalah ', nama)
+
+# nested loop pada for
+for a in rang(1,5):
+    for b in range(1,5):
+        c = a * b
+        print(c, end=" ")
+    print()
 ```
 
-## Lists
-## Tuples
-## Dictionary
+## Lists []
+Kumpulan beberapa value di dalam satu variabel (kalo di bahasa program lain array).
+Pada lists ini kita bisa mengakses, menambah, mengedit, dan menghapus elemen-elemen di dalamnya.
+```python
+random = [3, 'text', 'huruf', 10.5]
+print(random[2])
+# Output: huruf
+
+# cara menambahkan elemen ke dalam lists
+random.append('yusup')
+
+# untuk mengedit elemen di dalam lists
+random[3] = 9.5
+
+# untuk menghapus elemen di dalam lists
+del random[3]
+```
+
+## Tuples ()
+Tuples adalah list yang sifatnya immutable (nggak bisa di modifikasi).
+```python
+random1 = (3, 'text', 'huruf', 10.5)
+# convert tuples ke dalam bentuk lists
+print(list(random1))
+
+random = [3, 'text', 'huruf', 10.5]
+# convert lists ke dalam bentuk tuples
+print(tuple(random))
+```
+
+## Dictionary {}
+Pasangan key:value (array associative).
+```python
+bio = {'name':'yusup', 'age':'18', 'hobby':'read'}
+
+# cara mengakses datanya
+for key, value in bio.items():
+    print(key + " - " + value)
+# Output: name - yusup
+#         age  - 18
+#         hobby - read
+
+# menambahkan elemen baru ke dalam dictionary
+bio['dream'] = 'author'
+
+# mengedit elemen berdasarkan key
+bio['age'] = 20
+
+# menghapus elemen
+del bio['age']
+
+print(bio['name'])
+# Output: yusup
+```
+
 ## Set
 ## Fungsi
 ## Module
