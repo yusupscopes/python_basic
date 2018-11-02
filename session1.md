@@ -89,6 +89,19 @@ str(harga)
 int(harga)
 ```
 
+### Boolean
+Tipe data yang nilai nya cuma ada 2, yaitu __*True*__ dan __*False*__.
+```python
+angka1 = 20
+angka2 = 40
+print(angka1 < angka2)
+# Output: True
+
+text = 'belajarpython'
+print(text.isalnum())
+# Output: True
+```
+
 ## Komentar
 ```python
 # ini komentar satu baris
@@ -105,4 +118,30 @@ begitu juga dengan ini
 nama = input("Siapa nama kamu? ")
 umur = input("berapa umurmu? ")
 print("salam kenal! boss " + nama + ", kamu sudah " + umur + " tahun")
+```
+
+## Percabangan
+Cara kita menentukan kondisi
+### If dan Else
+```python
+angka1 = 20
+angka2 = 40
+
+if angka1 == angka2:
+    print('benar angka1 dan angka2 sama besar')
+else:
+    print('salah!')
+```
+
+### If, Elif, dan Else
+```python
+uang  = input('kamu punya uang berapa? ')
+utang = 10000
+
+if int(uang) < utang:
+    print('wah maaf masih belum cukup')
+elif int(uang) == utang:
+    print('terimakasih sudah bayar!')
+else:
+    print('wah uangnya lebih bos')
 ```
