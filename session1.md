@@ -175,7 +175,6 @@ else:
 
 # nested loop pada while
 a = 1
-
 while a < 5:
     b = 0
     while b < a:
@@ -194,7 +193,7 @@ for nama in orang:
     print('nama-namanya adalah ', nama)
 
 # nested loop pada for
-for a in rang(1,5):
+for a in range(1,5):
     for b in range(1,5):
         c = a * b
         print(c, end=" ")
@@ -256,8 +255,71 @@ print(bio['name'])
 # Output: yusup
 ```
 
-## Set
-## Fungsi
+```python
+# Dictionary bersarang
+data = { 1:{'name':'yusup', 'age':'21', 'hobby':'sing'},
+         2:{'name':'maulana', 'age':'12', 'hobby':'read'}
+       }
+print(data[2]['name'])
+# Output: maulana
+
+# cara mengakses data dictionary yang bersarang dengan loop
+for key, value in data.items():
+    print("\nKeynya: ", key)
+    for key2 in value:
+        print(key2 + "-", value[key2])
+```
+
+## Sets
+Sets adalah item yang nggak punya urutan. Kita nggak bisa mengakses dengan nomor index ataupun dengan key dan di dalam nya nggak boleh ada duplicate. Sets ini bisa kita manfaatkan untuk operasi himpunan seperti: union, intersection, difference, dan lain-lain.
+```python
+angka1 = {1,2,3,4,5}
+angka2 = {4,5,6,7,8}
+print(angka1 - angka2)
+# Output: {1,2,3}
+```
+
+```python
+orang = {'yusup', 'maulana', 'bro', 'bosqu', 'yusup'}
+orang.add('alex')
+orang.remove('bro')
+print(orang)
+# Output: {'yusup', 'maulana', 'bosqu', 'alex'}
+```
+
+## Function
+Function adalah blok atau beberapa baris kode yang bisa dipakai berulang-ulang.
+```python
+def cetak(text = 'default'):
+    print('=============')
+    print(text)
+    print('=============')
+
+cetak('hi, everyone!')
+cetak()
+# Output: hi, everyone!
+# Output: default
+```
+
+```python
+def hitung(a, b):
+    print('jumlah dari a dan b adalah ', a + b)
+
+hitung(10, 10)
+hitung(200, 300)
+# Output: jumlah dari a dan b adalah 20
+# Output: jumlah dari a dan b adalah 500
+```
+Return pada fungsi berguna untuk mengembalikan sebuah nilai.
+```python
+def hitung(a, b):
+    return a + b
+
+hasil1 = hitung(20, 30)
+print(hitung(hasil1, 50))
+# Output: 100
+```
+
 ## Module
 ## Scope variabel
 ## Exception handling
