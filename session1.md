@@ -310,6 +310,7 @@ hitung(200, 300)
 # Output: jumlah dari a dan b adalah 20
 # Output: jumlah dari a dan b adalah 500
 ```
+
 Return pada fungsi berguna untuk mengembalikan sebuah nilai.
 ```python
 def hitung(a, b):
@@ -318,6 +319,33 @@ def hitung(a, b):
 hasil1 = hitung(20, 30)
 print(hitung(hasil1, 50))
 # Output: 100
+```
+
+Keyword argument
+```python
+def printBio(name, hobby):
+    print("Name: " + name + " - Hobby: " + hobby)
+
+printBio(hobby = 'read', name = 'yusup')
+# Output: Name: yusup - Hobby: read
+```
+
+*Args adalah tempat kita menampung parameter secara dinamis (tidak perlu mendefinisikan arg1,arg2,arg3,dst).
+```python
+def printBio(*args):
+    for name in args:
+        print(name)
+
+printBio('yusup', 'maulana', 'adi', 'imam')
+```
+
+**Kwargs
+```python
+def printBio(**kwargs):
+    for key, value in kwargs.items():
+        print(key + " - " + value)
+
+print(name = 'yusup', age = '20', hobby = 'sing')
 ```
 
 ## Module
