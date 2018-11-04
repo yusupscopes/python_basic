@@ -381,5 +381,40 @@ print(now.strftime("%Y, %B, %d"))
 ```
 
 ## Scope variabel
+Ruang lingkup variabel pada python.
+```python
+name = "yusup"
+
+def printName():
+    global name
+    name = name + " maulana"
+    print("akses dari dalam " + name)
+
+printName()
+print("akses dari luar " + name)
+```
+
 ## Exception handling
+```python
+name = 'yusup'
+
+# untuk menghentikan program dimanapun
+# raise Exception("stop disini")
+
+try:
+    print(i + name)
+except NameError:
+    print('ada yang salah di i + name)
+```
+
+```python
+import sys
+
+def is_it_linux():
+    assert('linux' in sys.platform), "fungsi ini hanya untuk linux"
+
+is_it_linux()
+print('finish')
+```
+
 ## Latihan
