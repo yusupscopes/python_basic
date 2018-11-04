@@ -349,6 +349,37 @@ print(name = 'yusup', age = '20', hobby = 'sing')
 ```
 
 ## Module
+Module adalah cara kita mengorganisir kode ke beberapa file yang berbeda.
+```python
+# source.py
+person = {
+    "name" : "yusup",
+    "age"  : 21
+}
+
+def printName(name):
+    print("Nama kamu " + name)
+```
+
+```python
+# app.py
+# import source as s
+from source import printName
+
+# print(s.person)
+# print(s.printName('alex'))
+print(printName('alex'))
+```
+
+Built in module pada python.
+```python
+import datetime
+
+now = datetime.datetime.now()
+print(now.strftime("%Y, %B, %d"))
+# Output: 2018, November, 4
+```
+
 ## Scope variabel
 ## Exception handling
 ## Latihan
