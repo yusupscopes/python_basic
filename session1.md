@@ -392,6 +392,8 @@ def printName():
 
 printName()
 print("akses dari luar " + name)
+# Output: akses dari dalam yusup maulana
+#         akses dari luar yusup maulana
 ```
 
 ## Exception handling
@@ -405,6 +407,7 @@ try:
     print(i + name)
 except NameError:
     print('ada yang salah di i + name)
+# Output: ada yang salah di i + name
 ```
 
 ```python
@@ -418,3 +421,49 @@ print('finish')
 ```
 
 ## Latihan
+```python
+player1 = {'name':'songoku', 'power':100}
+player2 = {'name':'trunks', 'power':250}
+
+def attack(attacker, defender):
+    if(attacker['power'] > defender['power']):
+        print('serangan berhasil! selamat ', attacker['name'])
+    else:
+        print('serangan gagal! kamu lemah ', attacker['name'])
+
+def train(player):
+    player['power'] += 100
+
+train(player1)
+train(player1)
+attack(player1, player2)
+```
+
+```python
+name = input("Nama monsternya siapa? ")
+monster = {"name":name, 'power':100}
+
+def startGame():
+    choice = input("Mau apa? 1.Makan 2.Lihat Status 3.Keluar ")
+    if choice == "1":
+        goEat()
+    elif choice == "2":
+        goStatus()
+    else:
+        goExit()
+
+def goEat():
+    print("Nyam..Nyam")
+    monster['power'] += 100
+    startGame()
+
+def goStatus():
+    print("Check..Check...")
+    print(monster)
+    startGame()
+
+def goExit():
+    print("Bye..Bye...")
+
+startGame()
+```
