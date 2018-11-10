@@ -75,3 +75,27 @@ with open('write.csv', 'a') as csvfile:
 ```
 
 ## Menulis dan Membaca File JSON
+```python
+# menulis file json
+import json
+
+data = {}
+data['member'] = [
+    {'name':'jacklee','skill':'nafas naga'},
+    {'name':'goku','skill': 'tendangan maud'},
+    {'name':'trunks','skill':'pukulan beruang'}
+]
+
+with open('file.txt', 'w') as memberfile:
+    json.dump(data, memberfile)
+```
+```python
+# membaca file json
+import json
+
+with open('file.txt', 'r') as memberfile:
+    data = json.load(memberfile)
+
+    for member in data['member']:
+        print('namanya adalah '+ member['name'] + ' punya skill: ' + member['skill'])
+```
