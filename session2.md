@@ -40,3 +40,38 @@ def ask_user():
 
 ask_user()
 ```
+
+## Membaca File CSV
+```python
+import csv
+
+rows = []
+with open('file.csv', 'r') as csvfile:
+    csvreader = csv.DictReader(csvfile)
+    # for row in csvreader:
+    #     rows.append(row)
+    rows = list(csvreader)
+    print('total baris ', csvreader.line_num)
+
+for row in rows[:5]:
+    print(row['first_name'] + ' - ' + row['email'])
+```
+
+## Menulis File CSV
+```python
+import csv
+
+rows = [
+    {'nama' : 'jack lee', 'skill': 'tendangan maud', 'power': 200 }
+    {'nama' : 'jet chan', 'skill': 'pikulan maud', 'power': 250 }
+]
+
+with open('write.csv', 'a') as csvfile:
+    fields = ['nama', 'skill', 'power']
+    writer = csv.DictWriter(csvfile, fieldnames = fields)
+
+    writer.writeheader()
+    writer.writerows(rows)
+```
+
+## Menulis dan Membaca File JSON
